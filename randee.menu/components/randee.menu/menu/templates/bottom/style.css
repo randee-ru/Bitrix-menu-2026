@@ -1,0 +1,121 @@
+/* Randee footer / bottom menu */
+
+.randee-menu--bottom {
+  box-sizing: border-box;
+}
+
+.randee-menu__bot-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.randee-menu__bot-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+}
+
+.randee-menu__bot-title {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.randee-menu__bot-title--bold {
+  font-weight: 700;
+}
+
+.randee-menu__bot-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.randee-menu__bot-link:hover {
+  text-decoration: underline;
+}
+
+.randee-menu__bot-subtitle {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.randee-menu__bot-subtitle--emph {
+  font-size: 15px;
+}
+
+.randee-menu__bot-suba {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.randee-menu__bot-suba:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.randee-menu__bot-head {
+  position: relative;
+}
+
+.randee-menu__bot-head--collapsible {
+  cursor: pointer;
+  padding-right: 28px;
+}
+
+.randee-menu__bot-expand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.randee-menu__bot-expand::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+  opacity: 0.6;
+  transition: transform 0.15s ease;
+}
+
+.randee-menu__bot-expand[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.randee-menu__bot-panel--collapse {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .randee-menu__bot-panel--collapse {
+    display: none;
+  }
+  .randee-menu__bot-panel--collapse.is-open {
+    display: block;
+  }
+}
+
+/* Цветовые варианты (тёмный футер) */
+.randee-menu--bottom.randee-menu__bot--normal .randee-menu__bot-title,
+.randee-menu--bottom.randee-menu__bot--normal .randee-menu__bot-link {
+  color: #fff;
+}
+
+.randee-menu--bottom.randee-menu__bot--normal .randee-menu__bot-suba {
+  color: #e6e6e6;
+}
+
+.randee-menu--bottom.randee-menu__bot--normal .randee-menu__bot-head--collapsible {
+  color: #fff;
+}

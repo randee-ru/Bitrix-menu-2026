@@ -1,0 +1,27 @@
+/* Простое древовидное меню */
+
+.randee-menu--tree {
+  box-sizing: border-box;
+}
+
+.randee-menu__tree-root,
+.randee-menu__tree-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.randee-menu__tree-sub {
+  padding-left: 1rem;
+  margin-top: 0.35rem;
+}
+
+.randee-menu__tree-link {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.5;
+}
+
+.randee-menu__tree-link:hover {
+  text-decoration: underline;
+}
