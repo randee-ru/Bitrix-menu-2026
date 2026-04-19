@@ -82,28 +82,8 @@ $APPLICATION->IncludeComponent(
 
 ---
 
-## Публикация на GitHub (новый репозиторий)
-
-1. На [github.com/new](https://github.com/new) создайте репозиторий **`Bitrix-menu-2026`** (без README, если уже есть локальный коммит).
-2. В терминале на машине, где лежит клон этого репозитория:
-
-```bash
-cd bitrix-menu-2026
-git remote add origin https://github.com/<ВАШ_ЛОГИН>/Bitrix-menu-2026.git
-git branch -M main
-git push -u origin main
-```
-
-Подставьте свой логин и при необходимости используйте SSH: `git@github.com:<USER>/Bitrix-menu-2026.git`.
-
----
-
 ## Удаление модуля
 
 Через **Настройки → Модули** — удаление `randee.menu`. По желанию вручную удалите **`/local/modules/randee.menu`**, если каталог остался. Подробности — в `randee.menu/README.md`.
 
 ---
-
-## Лицензия
-
-Используйте и распространяйте в рамках своей политики; при публикации на GitHub можно оформить отдельный `LICENSE` (MIT и т.д.) по согласованию с правообладателем кода.
