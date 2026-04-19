@@ -4,6 +4,8 @@
 
 **English:** Bitrix D7 module for custom hierarchical menus with admin UI, ORM, and `randee.menu:menu` component (templates include `mega_menu`).
 
+**Скачать только модуль (ZIP):** файл в папке **[`releases/`](releases/)** — `randee.menu-<версия>.zip` (актуальная версия лежит в репозитории; обновляется скриптом сборки).
+
 ---
 
 ## Возможности
@@ -40,16 +42,20 @@
 
 4. **Сервисы → Меню сайта** — создайте меню (код латиницей), добавьте пункты.
 
-### Вариант B — архив модуля
+### Вариант B — готовый ZIP из репозитория
 
-В каталоге проекта можно собрать ZIP только модуля:
+1. На GitHub откройте папку **`releases/`** и скачайте **`randee.menu-<версия>.zip`** (или возьмите файл из клонированного репозитория локально).
+2. Распакуйте архив, скопируйте каталог **`randee.menu`** в **`/local/modules/randee.menu/`**.
+3. Установите модуль в админке (как в шаге 3 варианта A).
+
+Пересобрать архив после правок в `randee.menu/`:
 
 ```bash
 chmod +x scripts/build_randee_menu_zip.sh
 ./scripts/build_randee_menu_zip.sh
 ```
 
-Появится файл **`dist/randee.menu-<версия>.zip`**. Распакуйте и положите папку **`randee.menu`** в **`/local/modules/`**, затем установите модуль из админки (шаг 3 выше).
+ZIP создаётся в **`releases/randee.menu-<версия>.zip`** (версия берётся из `randee.menu/install/version.php`).
 
 Краткая шпаргалка также в **[`randee.menu/INSTALL.txt`](randee.menu/INSTALL.txt)**.
 
